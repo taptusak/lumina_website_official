@@ -1,0 +1,582 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: #ffffff;
+  padding-top: 100px; /* กันเนื้อหาชน navbar */
+}
+.page-content {
+  padding: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.status-item {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.reply-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f5f9ff;
+  border-left: 4px solid #4a90e2;
+  border-radius: 8px;
+}
+
+.waiting {
+  color: #999;
+  font-style: italic;
+}
+
+/* ===== BODY ===== */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #e6c56e;
+  background: #fff;
+  color: #aa8f4a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+  background: #e6c56e;
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 300px;   /* 🔥 จุดสำคัญ */
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: large;
+  font-weight: 600;
+  color: #ffd151;
+}
+
+.logo img {
+  width: 46px;
+  height: 30px;
+}
+
+/* DESKTOP MENU */
+.menu a {
+  text-decoration: none;
+  margin: 0 4px; 
+  padding: 8px 12px;
+  border-radius: 14px;
+  color: #444;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.menu a:hover {
+  background: #ffd151;
+  color: #ffff;
+    transform: translateY(-2px);
+}
+
+.menu a.active {
+  background: #ffd151;
+  color: #ffffff;
+}
+
+/* HAMBURGER */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== MOBILE MENU ===== */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 260px;
+  height: 100%;
+  background: #ffffff;
+  padding: 20px;
+  transition: 0.3s ease;
+  z-index: 1001;
+}
+
+#sideMenu a {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+#sideMenu a {
+  transition: all 0.25s ease;
+}
+
+#sideMenu a:hover {
+  background: #ffd151;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+
+#sideMenu a.active {
+  background: #ffd151;
+  color: #ffffff;
+}
+
+#sideMenu .close {
+  text-align: right;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ===== OVERLAY ===== */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 30px;
+}
+
+.box {
+  height: 300px;
+  background: white;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+    .desktop-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ===== iPad / Tablet ===== */
+@media (max-width: 1200px) {
+
+  .navbar {
+    padding: 0 40px;
+  }
+
+  .hero {
+    padding: calc(80px + 72px) 40px;
+  }
+
+  .hero-poster {
+    right: 40px;
+    max-width: 45%;
+  }
+}
+
+/* ===== Layout ===== */
+.report-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.329);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* ===== LEFT : ฟอร์มแจ้งปัญหา ===== */
+#reportForm label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #555;
+}
+
+#reportForm input,
+#reportForm select,
+#reportForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+#reportForm textarea {
+  resize: none;
+  height: 110px;
+}
+
+#reportForm button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e6c56e, #c9a84f);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#reportForm button:hover {
+  opacity: 0.9;
+}
+
+/* ===== RIGHT : ติดตามสถานะ ===== */
+#statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-item {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-item h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.status-item p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== Badge ===== */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.progress {
+  background: #e8f0ff;
+  color: #2b5cff;
+}
+
+.done {
+  background: #e6f8ec;
+  color: #1e7f4d;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .report-container {
+    grid-template-columns: 1fr;
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 16px; /* เพิ่มความโปร่ง */
+  }
+
+  .status-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  }
+.page-content {
+    margin-top: 100px;
+  padding: 50px;
+}
+  /* 👉 ตัวนี้สำคัญสุด */
+  .report-container {
+    padding: 0;        /* เอาขอบนอกออก */
+    gap: 10px;
+  }
+
+  .card {
+    padding: 14px;    /* ให้ขอบอยู่ที่ card แทน */
+    border-radius: 14px;
+  }
+}
+
+
+
+.site-footer {
+    background: #fffdf8;
+    padding: 60px 80px 30px;
+    border-top: 1px solid #f1e6c8;
+    color: #8a7a4f;
+    margin: 0; /* ✅ เพิ่มบรรทัดนี้ */
+}
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-icons-app{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #1f1f1f;
+}
+
+.logo-icon {
+    width: 18px;
+    height: 18px;
+    background: #f0c419;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: #1f1f1f;
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #8a7a4f;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #d4aa00;
+}
+
+.footer-icons-app {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-icons-app .icon-app {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #f0c419;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0c419;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.footer-icons-app .icon-app:hover {
+    background: #f0c419;
+    color: white;
+}
+
+.address {
+    font-size: 14px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #f1e6c8;
+    text-align: center;
+    font-size: 13px;
+    color: #b5a46d;
+}
+@media (max-width: 1024px) {
+
+    .call-to-action {
+        padding: 60px 20px;
+    }
+
+    .call-to-action h1 {
+        font-size: 40px;
+    }
+
+    .buttons1 {
+        flex-wrap: wrap;
+    }
+
+    .number-box1 {
+        width: 180px;
+    }
+
+    .site-footer {
+        padding: 50px 40px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+
+    .call-to-action {
+        min-height: auto;
+        padding: 50px 16px;
+    }
+
+    .badge1 {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .call-to-action h1 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    .subtitle1 {
+        font-size: 15px;
+    }
+
+    .buttons1 {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .number-box1 {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-icons-app {
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+
+    .call-to-action h1 {
+        font-size: 26px;
+    }
+
+    .number-box1 h2 {
+        font-size: 32px;
+    }
+
+    .footer-col h4 {
+        font-size: 15px;
+    }
+
+    .footer-col p,
+    .footer-col ul li a,
+    .address {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แดชบอร์ด</title>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="img/ไม่มีชื่อ 141_20251107214713 (2).png" alt="logo">
+    <span>พรรค Lumina</span>
+  </div>
+
+  <nav class="menu desktop-menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="#Aboutme">เกี่ยวกับเรา</a>
+    <a href="policy.html">นโยบาย</a>
+    <a href="members.html">ทีมงาน</a>
+    <a class="active" href="#">ระบบสารพัดประโยชน์</a>
+  </nav>
+
+  <div class="hamburger" onclick="openMenu()">☰</div>
+
+  <!-- ===== USER PROFILE (DESKTOP) ===== -->
+
+<div class="user-profile desktop-menu" id="logout">
+  <img id="userPhotoDesktop" src="" alt="profile">
+  <span id="userNameDesktop">ผู้ใช้</span>
+</div>
+
+</header>
+
+<!-- ===== OVERLAY ===== -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="sideMenu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="index.html">หน้าแรก</a>
+  <a href="#Aboutme">เกี่ยวกับเรา</a>
+  <a href="#policy">นโยบาย</a>
+  <a href="members.html">ทีมงาน</a>
+  <a class="active" href="#">ระบบสารพัดประโยชน์</a>
+
+  <div class="mobile-profile">
+  <img id="userPhoto" src="">
+  <p id="userName">ผู้ใช้</p>
+  <p id="userEmail"></p>
+</div>
+<button id="logoutMobile" class="logout-btn">
+  ออกจากระบบ
+</button>
+
+</div>
+
+
+<main class="dashboard">
+
+  <h1 class="dashboard-title">ระบบนักเรียน</h1>
+  <p class="dashboard-subtitle">เลือกบริการที่ต้องการใช้งาน</p>
+
+  <div class="dashboard-grid">
+
+    <a href="report.html" class="dash-card">
+      <span class="icon">🛠</span>
+      <h3>แจ้งปัญหา</h3>
+      <p>แจ้งปัญหาภายในโรงเรียน ติดตามสถานะได้</p>
+    </a>
+
+    <a href="comment.html" class="dash-card">
+      <span class="icon">💬</span>
+      <h3>คอมเมนต์กิจกรรม</h3>
+      <p>แสดงความคิดเห็นเกี่ยวกับกิจกรรมต่าง ๆ</p>
+    </a>
+
+    <a href="idea.html" class="dash-card">
+      <span class="icon">💡</span>
+      <h3>เสนอไอเดีย</h3>
+      <p>เสนอแนวคิดใหม่ ๆ เพื่อพัฒนาโรงเรียน</p>
+    </a>
+
+    <a href="feedback.html" class="dash-card">
+      <span class="icon">⭐</span>
+      <h3>Feedback</h3>
+      <p>ให้ข้อเสนอแนะกับระบบและผู้ลงสมัคร</p>
+    </a>
+
+    <a href="planner.html" class="dash-card">
+      <span class="icon">📅</span>
+      <h3>Planner</h3>
+      <p>วางแผนกิจกรรมและตารางงาน</p>
+    </a>
+
+  </div>
+</main>
+
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>

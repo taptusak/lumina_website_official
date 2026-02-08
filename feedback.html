@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+
+<div class="page-content">
+
+    <button class="back-btn" onclick="history.back()">← ย้อนกลับ</button>
+
+  <!-- 📝 SEND FEEDBACK -->
+  <div class="card">
+    <span class="tag">ส่งความคิดเห็น</span>
+    <h2>📝 Feedback</h2>
+    <p>แสดงความคิดเห็นหรือข้อเสนอแนะถึงสภานักเรียน</p>
+
+    <form id="feedbackForm">
+      <input
+        id="fbTitle"
+        type="text"
+        placeholder="หัวข้อ"
+        required
+      />
+
+      <textarea
+        id="fbDetail"
+        placeholder="รายละเอียด..."
+        required
+      ></textarea>
+
+      <button type="submit">📨 ส่ง Feedback</button>
+    </form>
+  </div>
+
+  <!-- 📬 MY FEEDBACK -->
+  <div class="card">
+    <span class="tag">รายการของฉัน</span>
+    <h2>📬 Feedback ของคุณ</h2>
+
+    <!-- JS จะ inject planner-item ลงตรงนี้ -->
+    <div id="feedbackList" class="comment-list"></div>
+  </div>
+
+</div>
+
+<!-- ======================
+     Footer
+====================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <strong>Student Council</strong>
+        <p>
+          สร้างสรรค์สังคมโรงเรียนที่มีความสุข<br>
+          ด้วยพลังของนักเรียน เพื่อนักเรียนทุกคน
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>เมนูทางลัด</h4>
+        <ul>
+          <li><a href="policy.html">นโยบายทั้งหมด</a></li>
+          <li><a href="#Aboutme">เกี่ยวกับเรา</a></li>
+          <li><a href="members.html">สมาชิกพรรค</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>ช่องทางการติดต่อ</h4>
+        <div class="footer-icons-app">
+          <a href="#" class="icon-app"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="icon-app"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="icon-app">⤴</a>
+        </div>
+        <p class="address">แสงสว่างแห่งปัญญา</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 ผู้ลงสมัครคณะกรรมการสภานักเรียน พรรค Lumina
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script type="module" src="feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ระบบแจ้งปัญหา</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="img/ไม่มีชื่อ 141_20251107214713 (2).png" alt="logo">
+    <span>พรรค Lumina</span>
+  </div>
+
+  <nav class="menu desktop-menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="index.html#Aboutme">เกี่ยวกับเรา</a>
+    <a href="policy.html">นโยบาย</a>
+    <a href="members.html">ทีมงาน</a>
+    <a class="active" href="#">ระบบสารพัดประโยชน์</a>
+    
+  </nav>
+<button class="back-btn" id="backBtn">
+  ← ย้อนกลับ
+</button>
+
+  <div class="hamburger" onclick="openMenu()">☰</div>
+</header>
+
+<!-- ===== OVERLAY ===== -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="sideMenu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="index.html">หน้าแรก</a>
+  <a href="index.html#Aboutme">เกี่ยวกับเรา</a>
+  <a href="policy.html">นโยบาย</a>
+  <a href="members.html">ทีมงาน</a>
+  <a class="active" href="#">ระบบสารพัดประโยชน์</a>
+</div>
+
+<div class="page-content">
+<div class="report-container">
+
+  <div class="card">
+    <h2>🛠️ แจ้งปัญหา</h2>
+
+    <form id="reportForm">
+      <label>หัวข้อปัญหา</label>
+      <input id="title" required>
+
+      <label>ประเภทปัญหา</label>
+      <select id="category" required>
+        <option value="">เลือกประเภท</option>
+        <option value="อาคาร / สถานที่">อาคาร / สถานที่</option>
+        <option value="อุปกรณ์">อุปกรณ์</option>
+        <option value="ระบบ / เว็บไซต์">ระบบ / เว็บไซต์</option>
+        <option value="อื่น ๆ">อื่น ๆ</option>
+      </select>
+
+      <label>รายละเอียด</label>
+      <textarea id="detail" required></textarea>
+
+      <button type="submit">ส่งเรื่อง</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>📌 ติดตามสถานะ</h2>
+    <div id="statusList"></div>
+  </div>
+
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- คอลัมน์ซ้าย -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                <span class="logo-icon"></span>
+                <strong>Student Council</strong>
+            </div>
+            <p>
+                สร้างสรรค์สังคมโรงเรียนที่มีความสุข<br>
+                ด้วยพลังของนักเรียน เพื่อนักเรียนทุกคน
+            </p>
+        </div>
+
+        <!-- คอลัมน์กลาง -->
+        <div class="footer-col">
+            <h4>เมนูทางลัด</h4>
+            <ul>
+                <li><a href="policy.html">นโยบายทั้งหมด</a></li>
+                <li><a href="#Aboutme">เกี่ยวกับเรา</a></li>
+                <li><a href="members.html">สมาชิกพรรค</a></li>
+            </ul>
+        </div>
+
+        <!-- คอลัมน์ขวา -->
+        <div class="footer-col">
+            <h4>ช่องทางการติดต่อ</h4>
+            <div class="footer-icons-app">
+                <a href="https://www.instagram.com/lumina_official03?igsh=MW1senh6bmhnNzFzag==" class="icon-app"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@lumina_official030?is_from_webapp=1&sender_device=pc" class="icon-app"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="icon-app">⤴</a>
+            </div>
+            <p class="address">
+                แสงสว่างแห่งปัญญา
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 ผู้ลงสมัครคณะกรรมการสภานักเรียน พรรค Lumina. สงวนลิขสิทธิ์
+    </div>
+</footer>
+
+<script type="module" src="report.js"></script>
+</body>
+</html>

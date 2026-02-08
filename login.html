@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เข้าสู่ระบบ | ระบบแจ้งเรื่อง</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="img/ไม่มีชื่อ 141_20251107214713 (2).png" alt="logo">
+    <span>พรรค Lumina</span>
+  </div>
+
+  <nav class="menu desktop-menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="index.html#Aboutme">เกี่ยวกับเรา</a>
+    <a href="policy.html">นโยบาย</a>
+    <a href="members.html">ทีมงาน</a>
+    <a class="active" href="login.css">ระบบสารพัดประโยชน์</a>
+  </nav>
+
+  <div class="hamburger" onclick="openMenu()">☰</div>
+</header>
+
+<!-- ===== OVERLAY ===== -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="sideMenu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="index.html">หน้าแรก</a>
+  <a href="index.html#Aboutme">เกี่ยวกับเรา</a>
+  <a href="policy.html">นโยบาย</a>
+  <a href="members.html">ทีมงาน</a>  
+  <a class="active" href="login.html">ประกาศ</a>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content">
+
+  <div class="login-card">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>School Report</h1>
+    </div>
+
+    <p class="subtitle">
+      ระบบแจ้งปัญหาและติดตามสถานะ<br>
+      โปร่งใส • รวดเร็ว • ตรวจสอบได้
+    </p>
+
+    <button id="googleLogin" class="google-btn">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg">
+      เข้าสู่ระบบด้วย Google
+    </button>
+
+    <p class="footer">
+      สำหรับนักเรียนและบุคลากร
+    </p>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <div class="footer-logo">
+        <span class="logo-icon"></span>
+        <strong>Student Council</strong>
+      </div>
+      <p>
+        สร้างสรรค์สังคมโรงเรียนที่มีความสุข<br>
+        ด้วยพลังของนักเรียน เพื่อนักเรียนทุกคน
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>เมนูทางลัด</h4>
+      <ul>
+        <li><a href="policy.html">นโยบายทั้งหมด</a></li>
+        <li><a href="#Aboutme">เกี่ยวกับเรา</a></li>
+        <li><a href="members.html">สมาชิกพรรค</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>ช่องทางการติดต่อ</h4>
+      <div class="footer-icons-app">
+        <a href="https://www.instagram.com/lumina_official03" class="icon-app"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@lumina_official030" class="icon-app"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="icon-app">⤴</a>
+      </div>
+      <p class="address">แสงสว่างแห่งปัญญา</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 ผู้ลงสมัครคณะกรรมการสภานักเรียน พรรค Lumina. สงวนลิขสิทธิ์
+  </div>
+</footer>
+
+<script src="login.js" type="module"></script>
+</body>
+</html>
