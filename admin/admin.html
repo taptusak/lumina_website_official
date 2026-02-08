@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h2>👑 Admin</h2>
+    <button data-page="reports">📌 แจ้งปัญหา</button>
+    <button data-page="comments">💬 คอมเมนต์</button>
+    <button data-page="ideas">💡 ไอเดีย</button>
+    <button data-page="feedbacks">📝 Feedback</button>
+    <button id="logoutBtn">ออกจากระบบ</button>
+  </aside>
+
+  <main class="content">
+
+    <section id="reports" class="active">
+      <h2>📌 รายการแจ้งปัญหา</h2>
+      <div id="reportList"></div>
+    </section>
+
+    <section id="comments">
+      <h2>💬 คอมเมนต์กิจกรรม</h2>
+      <div id="commentList"></div>
+    </section>
+
+    <section id="ideas">
+      <h2>💡 ไอเดียที่เสนอมา</h2>
+      <div id="ideaList"></div>
+    </section>
+    <section id="feedbacks">
+      <h2>📝 Feedback จากผู้ใช้</h2>
+      <div id="feedbackAdminList"></div>
+    </section>
+
+  </main>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>
